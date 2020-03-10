@@ -32,6 +32,13 @@ p {
   background-color: #000;
   text-decoration: none;
   color: #fff;
+  transition: 0.6s;
+}
+.btn:hover {
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #ddd;
 }
 header {
   position: fixed;
@@ -143,7 +150,9 @@ header.sticky ul li a {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.6s;
 }
+
 .services .box .iconBx {
   margin-top: 25px;
 }
@@ -151,6 +160,7 @@ header.sticky ul li a {
   max-width: 70px;
   margin-bottom: 15px;
 }
+
 .services .box h2 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -159,6 +169,37 @@ header.sticky ul li a {
 }
 .services .box p {
   text-align: center;
+}
+.services .box.active {
+  background-color: #4976ff;
+  transition: 0.6s;
+}
+.services .box:hover {
+  background-color: #4976ff;
+}
+.services .box.active:hover {
+  background-color: #fff;
+}
+.services .box.active .iconBx img {
+  filter: invert(100%);
+}
+.services .box:hover .iconBx img {
+  filter: invert(100%);
+}
+.services .box.active:hover .iconBx img {
+  filter: invert(0%);
+}
+.services .box.active h2,
+.services .box.active p {
+  color: #fff;
+}
+.services .box:hover h2,
+.services .box:hover p {
+  color: #fff;
+}
+.services .box.active:hover h2,
+.services .box.active:hover p {
+  color: #000;
 }
 .stats {
   background-color: #000;
@@ -172,7 +213,7 @@ header.sticky ul li a {
 .statsBox {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   max-width: 100%;
   margin-top: 40px;
@@ -229,3 +270,228 @@ header.sticky ul li a {
   color: rgba(255, 255, 255, 0.99);
   transform: translateY(0%);
 }
+.teamBx {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+.teamBx .member {
+  position: relative;
+  background-color: #000;
+  min-height: 300px;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teamBx .member .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.teamBx .member .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.teamBx .member .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  transition: 0.6s;
+  opacity: 0;
+}
+.teamBx .member .details:hover {
+  opacity: 0.7;
+}
+.teamBx .member .details h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1;
+}
+
+.teamBx .member .details h2 span {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+}
+.contact {
+  /* background-color: #000; */
+  padding-bottom: 0;
+}
+.contact h3,
+.contact p {
+  color: #000;
+}
+.contactForm {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+.contactForm form {
+  width: 100%;
+}
+.contactForm form .row100 {
+  display: flex;
+  width: 100%;
+}
+.contactForm form .row100 .inputBx50 {
+  width: 50%;
+  margin: 0 20px;
+}
+.contactForm form .row100 .inputBx100 {
+  width: 100%;
+  margin: 0 20px;
+}
+.contactForm form .row100 input,
+.contactForm form .row100 textarea {
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #000;
+  color: #000;
+  background-color: transparent;
+  width: 100%;
+  padding-top: 10px 0;
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px 0;
+  resize: none;
+}
+.contactForm form .row100 textarea {
+  height: 100px;
+}
+.contactForm form .row100 textarea::placeholder,
+.contactForm form .row100 input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.contactForm form .row100 input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  max-width: 100px;
+  margin: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.6s;
+}
+.contactForm form .row100 input[type="submit"]:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ------------------------------ Responsive CSS */
+.toggle {
+  display: none;
+}
+@media (max-width: 992px) {
+  .toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .toggle::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    z-index: 1111;
+    box-shadow: 0 10px 0 #000;
+    transition: 0.6s;
+  }
+  .toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    z-index: 1111;
+    /* box-shadow: 0 10px 0 #fff; */
+    transition: 0.6s;
+  }
+  header {
+    padding: 5px 50px;
+    background-color: #fff;
+  }
+  header .logo img {
+    filter: invert(0%);
+  }
+  header ul li a {
+    color: #000;
+  }
+  header ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: auto;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  }
+  header.activee ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    padding-top: 20px;
+  }
+  header.activee ul li a {
+    margin: 10px 0;
+    font-size: 20px;
+    display: inline-block;
+  }
+  .banner {
+    background-position: center;
+  }
+  .banner h2 {
+    font-size: 50px;
+    padding: 0 50px;
+  }
+  .sec {
+    padding: 100px 50px 50px 50px;
+  }
+  .services .box {
+    width: 100%;
+  }
+  .stats {
+    padding-top: 250px;
+  }
+  .row100 {
+    flex-direction: column;
+  }
+  .contactForm form .row100 .inputBx50,
+  .contactForm form .row100 .inputBx100 {
+    width: 100%;
+    margin: 0;
+  }
+  h3 {
+    font-size: 36px;
+  }
+}
+
+/* ------------------------------ Responsive CSS */

@@ -13,13 +13,14 @@
         <img src="./Images/logo 2.png" alt="" />
       </a>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Projects</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="act">Home</a></li>
+        <li><a href="#about" class="act">About</a></li>
+        <li><a href="#services" class="act">Services</a></li>
+        <li><a href="#portfolio" class="act">Projects</a></li>
+        <li><a href="#team" class="act">Team</a></li>
+        <li><a href="#contact" class="act">Contact</a></li>
       </ul>
+      <div class="toggle"></div>
     </header>
     <!-- ------Header -->
     <!-- Banner -->
@@ -58,7 +59,7 @@
           </p>
         </div>
         <div class="services">
-          <div class="box">
+          <div class="box active">
             <div class="iconBx">
               <img src="./Images/icon1.png" alt="" />
             </div>
@@ -175,7 +176,7 @@
     </section>
     <!-- ------ Projects  -->
     <!-- -------Team -->
-    <section class="sec work" id="portfolio">
+    <section class="sec" id="team">
       <div class="content">
         <div class="mxw800px">
           <h3>Our Team Memebers</h3>
@@ -189,11 +190,74 @@
             <div class="imgBx">
               <img src="./Images/1.jpg" alt="" />
             </div>
+            <div class="details">
+              <h2>
+                John Doe <br />
+                <span>Creative Director</span>
+              </h2>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBx">
+              <img src="./Images/2.jpg" alt="" />
+            </div>
+            <div class="details">
+              <h2>
+                John Doe <br />
+                <span>Creative Director</span>
+              </h2>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBx">
+              <img src="./Images/hafiz2.jpg" alt="" />
+            </div>
+            <div class="details">
+              <h2>
+                Hafiz Javaid<br />
+                <span>Creative Director</span>
+              </h2>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- -------Team -->
+    <!-- --Contact Us -->
+    <section class="sec contact" id="contact">
+      <div class="content">
+        <div class="mxw800px">
+          <h3>Send Us A Message</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="contactForm">
+          <form action="">
+            <div class="row100">
+              <div class="inputBx50">
+                <input type="text" placeholder="Full Name" />
+              </div>
+              <div class="inputBx50">
+                <input type="email" placeholder="Email Address" />
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputBx100">
+                <textarea name="" placeholder="Message"></textarea>
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputBx100">
+                <input type="submit" value="Send" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- <p class="copyright">Design & Developed By <a href="#">RigRex</a></p> -->
+    </section>
+    <!-- --Contact Us -->
     <script src="./script.js"></script>
   </body>
 </html>
